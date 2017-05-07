@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">1point3acres</string>
+    <string name="sign_up">注册</string>
+    <string name="sign_in">登录</string>
+    <string name="home_page">主页</string>
+    <string name="sign_in_header">登录界面</string>
+    <string name="sign_up_header">注册界面</string>
+    <string name="username">用户名 * ：</string>
+    <string name="password">密码 * ：</string>
+    <string name="password_certify">确认密码 * ：</string>
+    <string name="email">Email * :</string>
+    <string name="marital_status">情感状态 ：</string>
+    <string name="blood_type">血型 ：</string>
+    <string name="check_code">验证码 * ：</string>
+    <string name="security_questions">安全信息 ：</string>
+    <string name="sorry">肥肠抱歉，本页面因时间原因未实现，请移步pc端。</string>
+
+</resources>
