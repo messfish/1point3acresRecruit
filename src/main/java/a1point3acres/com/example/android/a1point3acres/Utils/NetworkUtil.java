@@ -47,7 +47,7 @@ public class NetworkUtil {
     // 这两个值主要是用于把无关的字符弄出去。
 
     /**
-     * 这个method用于构造登录主界面的url。
+     * 这个method用于构造登录主界面的url。目的是为了提取出form里面hash的值。
      * @return 登录主界面的url。
      */
     private static URL buildLoginURL() {
