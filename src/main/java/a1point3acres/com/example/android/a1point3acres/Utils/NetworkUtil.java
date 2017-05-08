@@ -60,7 +60,7 @@ public class NetworkUtil {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        Log.v(TAG, "Build url: " + result);
+        Log.v(TAG, "构造出的url为: " + result);
         return result;
     }
 
@@ -80,14 +80,17 @@ public class NetworkUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Uri buildUri = Uri.parse(WEB_BASE_URL).buildUpon()
+        Uri.Builder build = Uri.parse(WEB_BASE_URL).buildUpon()
                           .appendQueryParameter(MODE_KEY, MODE_VALUE)
                           .appendQueryParameter(ACTION_KEY, ACTION_VALUE)
                           .appendQueryParameter(USERNAME_KEY, nameValue)
-                          .appendQueryParameter(PASSWORD_KEY, passwordValue)
-                          .appendQueryParameter(QUESTION_ID_KEY, questionIDValue)
-                          .appendQueryParameter(ANSWER_KEY, answerValue)
-                          .appendQueryParameter(LOGIN_SUBMIT_KEY, LOGIN_SUBMIT_VALUE)
+                          .appendQueryParameter(PASSWORD_KEY, passwordValue);
+        /* 用户没有设置安全问题，跳过与之相关的参数。*/
+        if (!questionIDValue.equals("0")) {
+            build.appendQueryParameter(QUESTION_ID_KEY, questionIDValue)
+                    .appendQueryParameter(ANSWER_KEY, answerValue);
+        }
+        Uri buildUri = build.appendQueryParameter(LOGIN_SUBMIT_KEY, LOGIN_SUBMIT_VALUE)
                           .appendQueryParameter(LOGIN_HASH_KEY, hashValue).build();
         URL result = null;
         try {
@@ -95,7 +98,7 @@ public class NetworkUtil {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        Log.v(TAG, "Build url: " + result);
+        Log.v(TAG, "构造出的url为: " + result);
         return result;
     }
 

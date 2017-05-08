@@ -1,79 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginTop="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+    android:layout_height="wrap_content"
     tools:context="a1point3acres.com.example.android.a1point3acres.SignUpActivity">
-
-    <TextView
-        android:id="@+id/username_sign_up"
-        style="@style/TextStyle"
-        android:text="@string/username"/>
-
-    <EditText
-        android:id="@+id/username_input_sign_up"
-        style="@style/ViewStyle"/>
-
-    <TextView
-        android:id="@+id/password_sign_up"
-        style="@style/TextStyle"
-        android:text="@string/password" />
-
-    <EditText
-        android:id="@+id/password_input_sign_up"
-        style="@style/PasswordStyle"/>
-
-    <TextView
-        android:id="@+id/confirm_password_sign_up"
-        style="@style/TextStyle"
-        android:text="@string/password_certify" />
-
-    <EditText
-        android:id="@+id/confirm_password_input_sign_up"
-        style="@style/PasswordStyle"/>
-
-
-    <TextView
-        android:id="@+id/email_sign_up"
-        style="@style/TextStyle"
-        android:text="@string/email" />
-
-    <EditText
-        android:id="@+id/email_input_sign_up"
-        style="@style/ViewStyle"/>
-
-    <TextView
-        android:id="@+id/marital_status_sign_up"
-        style="@style/TextStyle"
-        android:text="@string/marital_status"/>
-
-    <EditText
-        android:id="@+id/marital_status_input_sign_up"
-        style="@style/ViewStyle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
         <TextView
-            android:id="@+id/blood_type_sign_up"
-            android:layout_width="wrap_content"
+            android:id="@+id/username_sign_up"
+            style="@style/TextStyle"
+            android:text="@string/username"/>
+
+        <EditText
+            android:id="@+id/username_input_sign_up"
+            style="@style/ViewStyle"/>
+
+        <TextView
+            android:id="@+id/password_sign_up"
+            style="@style/TextStyle"
+            android:text="@string/password" />
+
+        <EditText
+            android:id="@+id/password_input_sign_up"
+            style="@style/PasswordStyle"/>
+
+        <TextView
+            android:id="@+id/confirm_password_sign_up"
+            style="@style/TextStyle"
+            android:text="@string/password_certify" />
+
+        <EditText
+            android:id="@+id/confirm_password_input_sign_up"
+            style="@style/PasswordStyle"/>
+
+
+        <TextView
+            android:id="@+id/email_sign_up"
+            style="@style/TextStyle"
+            android:text="@string/email" />
+
+        <EditText
+            android:id="@+id/email_input_sign_up"
+            style="@style/ViewStyle"/>
+
+        <TextView
+            android:id="@+id/marital_status_sign_up"
+            style="@style/TextStyle"
+            android:text="@string/marital_status"/>
+
+        <EditText
+            android:id="@+id/marital_status_input_sign_up"
+            style="@style/ViewStyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="32sp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:text="@string/blood_type"/>
-        <Spinner
-            android:id="@+id/spinner_sign_up"
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/blood_type_sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:text="@string/blood_type"/>
+
+            <Spinner
+                android:id="@+id/spinner_sign_up"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/check_code"
+                style="@style/TextStyle"
+                android:text="@string/check_code"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/check_code_image"
+                style="@style/ImageStyle"
+                android:onClick="changeImage"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextStyle"
+            android:text="@string/cannot_see"/>
+
+        <EditText
+            style="@style/ViewStyle"/>
+
+        <Button
+            android:id="@+id/confirm_sign_up"
+            style="@style/ViewStyle"
+            android:textSize="24sp"
+            android:text="@string/sign_up"/>
+
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
